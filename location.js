@@ -16,16 +16,14 @@ updateRemoteStudents([
 */
 
 function updateRemoteStudents(objArr) {
-    if (Object.keys(objArr[0]).length > 0) {
-      return objArr.map(person => {
-        const copyObjArr = {...person}
-        copyObjArr.hasOwnProperty("location") ? person : copyObjArr.location = "remote"
-        return copyObjArr
-      })
-    }
-    return objArr;
+  if (Object.keys(objArr[0]).length > 0) {
+    return objArr.map(person => {
+      const copyObjArr = { ...person }
+      copyObjArr.hasOwnProperty("location") ? person : copyObjArr.location = "remote"
+      return copyObjArr
+    })
+  }
+  return objArr;
 }
 
 module.exports = updateRemoteStudents
-
-test
